@@ -4,6 +4,7 @@
 
 @implementation NSObject (BaiduNetdisk)
 
+// 破解百度云 无限超级VIP加速下载
 + (void)hookBaiduNetdisk
 {
     ct_hookMethod(objc_getClass("BandwidthManager"), @selector(request:increaseBytesTransferred:), [self class], @selector(hook_request:increaseBytesTransferred:));
